@@ -1,0 +1,85 @@
+{
+    "levels_no":1,
+    "levels":[
+        {
+            "level": 1,
+            "name":"Level 1",
+            "size": {
+                "rows": 3,
+                "cols": 4
+            },
+            "pairs":[
+                {
+                    "name":"bread",
+                    "a":"toast.png",
+                    "b":"toast.png"
+                },
+                {
+                    "name":"pasta",
+                    "a": "pasta.png",
+                    "b": "pasta.png"
+                },
+                {
+                    "name":"tea",
+                    "a": "tea.png",
+                    "b": "tea.png"
+                },
+                {
+                    "name":"candy",
+                    "a": "candy.png",
+                    "b": "candy.png"
+                },
+                {
+                    "name":"cupcake",
+                    "a": "cupcake-2.png",
+                    "b":"cupcake-2.png"
+                },
+                {
+                    "name":"fish",
+                    "a": "fish.png",
+                    "b": "fish.png"
+                }
+            ]
+        },
+        {
+            "level": 2,
+            "name":"Level 2",
+            "size": {
+                "rows": 3,
+                "cols": 4
+            },
+            "pairs":[
+                {
+                    "name":"ananas",
+                    "a":"pineapple.png",
+                    "b":"letters/1_alf.png"
+                },
+                {
+                    "name":"beed",
+                    "a": "egg.png",
+                    "b": "letters/2_ba.png"
+                },
+                {
+                    "name":"tofah",
+                    "a": "apple-1.png",
+                    "b": "letters/3_ta.png"
+                },
+                {
+                    "name":"jazar",
+                    "a": "carrot.png",
+                    "b": "letters/5_jem.png"
+                },
+                {
+                    "name":"haleeb",
+                    "a": "milk-1.png",
+                    "b": "letters/6_ha.png"
+                },
+                {
+                    "name":"thoom",
+                    "a": "garlic.png",
+                    "b": "letters/4_tha.png"
+                },
+            ]
+        },
+    ]
+}

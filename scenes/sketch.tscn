@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://sprites/ui/buttons_atlas_texture.tres" type="Texture" id=1]
+
+[node name="Sketch" type="Node2D"]
+position = Vector2( 0, -1.85059 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 5, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 176, 196, 416, 178 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 494.813
+margin_top = 411.307
+margin_right = 780.813
+margin_bottom = 541.307
+
+[node name="Sprite" type="Sprite" parent="Button"]
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 627, 197.895, 427, 179 )
+

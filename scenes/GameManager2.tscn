@@ -1,0 +1,94 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scripts/GameManager.gd" type="Script" id=1]
+[ext_resource path="res://scenes/background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/CardOneName.gd" type="Script" id=3]
+[ext_resource path="res://fonts/Symtext.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://scripts/CardTwoName.gd" type="Script" id=5]
+[ext_resource path="res://sprites/ui/button_normal.png" type="Texture" id=6]
+[ext_resource path="res://sprites/ui/button_click.png" type="Texture" id=7]
+[ext_resource path="res://sprites/ui/button_hover.png" type="Texture" id=8]
+[ext_resource path="res://sprites/ui/button_disabled.png" type="Texture" id=9]
+[ext_resource path="res://sprites/ui/back.png" type="Texture" id=10]
+[ext_resource path="res://scenes/ScoreBoard.tscn" type="PackedScene" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 27
+font_data = ExtResource( 4 )
+
+[node name="GameManger" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 404.904, 486.331, 399.352 ],
+"_edit_vertical_guides_": [ 806.681, 780.772, 756.714 ]
+}
+
+[node name="background" parent="." instance=ExtResource( 2 )]
+visible = false
+position = Vector2( 0, 2.39172 )
+
+[node name="CardOneName" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 320.0
+margin_top = 880.0
+margin_right = 620.0
+margin_bottom = 938.0
+rect_scale = Vector2( 2, 2 )
+text = "Card 1 : Name"
+script = ExtResource( 3 )
+
+[node name="CardTwoName" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 1040.0
+margin_top = 880.0
+margin_right = 1340.0
+margin_bottom = 938.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "Card 1 : Name"
+script = ExtResource( 5 )
+
+[node name="CheckBox" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 940.0
+margin_top = 880.0
+margin_right = 986.0
+margin_bottom = 938.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "?"
+
+[node name="NumberOfMatches" type="RichTextLabel" parent="."]
+margin_left = 433.0
+margin_top = 1000.0
+margin_right = 858.0
+margin_bottom = 1058.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Number of Matches: 0"
+
+[node name="BackToMenuButton" type="TextureButton" parent="."]
+margin_left = 23.0
+margin_top = 888.0
+margin_right = 473.0
+margin_bottom = 1088.0
+rect_scale = Vector2( 0.9, 0.9 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
+texture_disabled = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="BackToMenuButton"]
+position = Vector2( 219, 84 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 10 )
+
+[node name="Center" type="Node2D" parent="."]
+position = Vector2( 800, 400 )
+
+[node name="ScoreBoard" parent="." instance=ExtResource( 11 )]
+position = Vector2( 960, 540 )
+
+[connection signal="pressed" from="BackToMenuButton" to="." method="_on_BackToMenuButton_pressed"]
